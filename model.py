@@ -214,7 +214,7 @@ def plot_conf_matrix(parameters, pca, scaling, sampling, algorithm, place, save=
     X_test = pd.read_csv(X_test_path, index_col=False)
                 
     if algorithm == 'Logistic Regression':
-            algo = LogisticRegression(random_state=25, **literal_eval(parameters))
+            algo = LogisticRegression(**literal_eval(parameters))
     elif algorithm == 'Random Forest':
             algo = RandomForestClassifier(**literal_eval(parameters))
     elif algorithm == 'AdaBoost':
